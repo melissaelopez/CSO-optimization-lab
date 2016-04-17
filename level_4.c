@@ -64,7 +64,9 @@ void level_4(node** head, int length)
 // 150,003    78,126  /home/stud/Desktop/Projects/melissaelopez-proj3/level_4.c:level_4
 // 100,001    45,316  /home/stud/Desktop/Projects/melissaelopez-proj3/level_4.c:level_4_opt
 
-
+// This version is optimied by combining the two for loops, to take advantage of only 
+// having to go through the for loop and access all the nodes once, rather then going
+// through the whole thing just to reset it to the start after the first loop.
 void level_4_opt(node** head, int length)
 {
     // malloc a contiguous block of memory on the heap
