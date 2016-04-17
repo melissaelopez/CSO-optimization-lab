@@ -14,7 +14,7 @@ typedef struct data_ {
 } data; 
 
 
-typedef struct { 
+typedef struct data_2_{ 
 	char c1;
 	double f1;
 	int n1; 
@@ -23,6 +23,14 @@ typedef struct {
 	double f2; 
 } data_2; 
 
+typedef struct data_2_new_{
+	char c1;
+	char c2;
+	int n1; 
+	int n2;
+	double f1;
+	double f2; 
+} data_2_new; 
 
 typedef struct node_ { 
 	data value;
