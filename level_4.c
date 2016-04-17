@@ -1,5 +1,5 @@
 /*
- * author: 
+ * author: Melissa Lopez
  * 
  */
 
@@ -61,11 +61,38 @@ void level_4(node** head, int length)
     *head = new_list;
 }
 
+// 150,003    78,126  /home/stud/Desktop/Projects/melissaelopez-proj3/level_4.c:level_4
+// 100,001    45,316  /home/stud/Desktop/Projects/melissaelopez-proj3/level_4.c:level_4_opt
 
 
 void level_4_opt(node** head, int length)
 {
+    // malloc a contiguous block of memory on the heap
+    // that is big enough for the entire list.
+    node* new_list = malloc(sizeof(node) * length);
 
+    // go through the list and make a copy of all the 
+    // nodes and place them into the contiguous block in order
+    node* n = *head;
+    int i;
+    for(i = 0 ; i < length ; ++i) {
+        
+        node copy = { n->value, NULL };
+        new_list[i] = copy;
+
+        // link each node in the new list **************
+        new_list[i].next = &new_list[i+1];
+        // free the old nodes **************************
+        node* free_me = n;
+        n = n->next;
+        free(free_me);
+    }
+
+    // free the last node of the old list
+    free(n);
+
+    // point head at the new packed list
+    *head = new_list;
 
 
 
