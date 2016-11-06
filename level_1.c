@@ -16,7 +16,6 @@
 // Note: your function needs to compute the entire matrix A,
 // not only its x+y entry. 
 
-
 double level_1(double * B, double * A, int x, int y )
 {	
     int i, j; 
@@ -28,7 +27,6 @@ double level_1(double * B, double * A, int x, int y )
 
     return A[x+y];
 }
-
 
 // This version has i in the inner loop in order to access consecutive memory
 // locations in the array. This way A[i] is just increasing by 1 each time it's
