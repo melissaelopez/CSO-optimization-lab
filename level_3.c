@@ -42,7 +42,6 @@ long level_3(long * B, long * A, int x){
     return ret;
 }
 
-
 // This is optimized by taking into account that we are constantly overwriting
 // information in level_3, and it's completely unneccesary. In my version, we're
 // only finding those values that we need to contruct our array, and only using
@@ -80,6 +79,3 @@ long level_3_opt(long * B, long * A, int x){
 	free (C); C = 0; 
     return ret;
 }
-
-
-
