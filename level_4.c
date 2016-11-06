@@ -9,13 +9,11 @@
 
 #include "proj3.h"
 
-
 // Implement a C function called level_4_opt. It should perform the same 
 // task as the implemented level_4 function. 
 // In the comments for the function describe why your changes make the
 // function more cache friendly. 
 //
-
 
 // Note: Data structures like linked lists are not very
 // cache friendly (their nodes can be scattered all over
@@ -24,9 +22,7 @@
 // preserves the traditional linked list connections. 
 // Your own code needs to accomplish the same. 
  
-
-void level_4(node** head, int length)
-{
+void level_4(node** head, int length){
     // malloc a contiguous block of memory on the heap
     // that is big enough for the entire list.
     node* new_list = malloc(sizeof(node) * length);
@@ -67,15 +63,14 @@ void level_4(node** head, int length)
 // This version is optimied by combining the two for loops, to take advantage of only 
 // having to go through the for loop and access all the nodes once, rather then going
 // through the whole thing just to reset it to the start after the first loop.
-void level_4_opt(node** head, int length)
-{
+void level_4_opt(node** head, int length){
     // malloc a contiguous block of memory on the heap
     // that is big enough for the entire list.
-    node* new_list = malloc(sizeof(node) * length);
+    node * new_list = malloc(sizeof(node) * length);
 
     // go through the list and make a copy of all the 
     // nodes and place them into the contiguous block in order
-    node* n = *head;
+    node * n = *head;
     int i;
     for(i = 0 ; i < length ; ++i) {
         
@@ -96,25 +91,9 @@ void level_4_opt(node** head, int length)
     // point head at the new packed list
     *head = new_list;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-
 /* DO NOT MODIFY THE FUNCTION THAT FOLLOWS */
-
 
 void addFront(data * s,  node ** head) {
 	if (head == 0 ) return;
@@ -130,5 +109,3 @@ void addFront(data * s,  node ** head) {
     n->next = (*head);
     (*head) = n;
 }
-
-
