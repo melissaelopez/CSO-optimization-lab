@@ -81,4 +81,3 @@ char * level_2_opt(){
 	//DO NOT modify the rest of this function 
     return sum_c;
 }
-
