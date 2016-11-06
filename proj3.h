@@ -13,7 +13,6 @@ typedef struct data_ {
 	int n2;
 } data; 
 
-
 typedef struct data_2_{ 
 	char c1;
 	double f1;
@@ -37,11 +36,10 @@ typedef struct node_ {
 	struct node_ * next; 
 } node; 
 
-
 /* DO NOT modify anything below this line */
 
 #define SMALL   64
-#define N	    1024
+#define N	1024
 #define DIM     512
 #define DIM2    1024
 #define LARGE   10000
@@ -50,7 +48,6 @@ typedef struct node_ {
 int level_0( int * B, int x, int y );
 
 int level_0_opt( int * B, int x, int y );
-
 
 double level_1(double * B, double * A, int x, int y ); 
 
